@@ -23,11 +23,11 @@ class Board():
         """
         盤面を表示する.
         """
-        print("  01234567")
+        print("  0 1 2 3 4 5 6 7")
         for index, row in enumerate(self.grid):
             print(index, end=" ")
             for cell in row:
-                print(self._get_cell_symbol(cell), end="")
+                print(self._get_cell_symbol(cell), end=" ")
             print()
 
     def _get_cell_symbol(self, cell: Color) -> str:
@@ -149,6 +149,12 @@ class Board():
             石を置ける場所があるかどうか 
         """
         return len(self.get_valid_moves(p)) != 0
+
+    def grid_copy(self) -> List[List[int]]:
+        """
+        盤面を返す
+        """
+        return self.grid
     
     def get_copy(self) -> 'Board':
         """

@@ -1,15 +1,17 @@
 from Game import Game
 from AgentRandom import AgentRandom
 from AgentMiniMethod import AgentMiniMethod
+from AgentManual import AgentManual
+from AgentKoki import AgentKoki
 
 
 # agentRandomとAgentMiniMethodが一回プレイする
-"""
-g = Game(AgentRandom, AgentMiniMethod)
+
+g = Game(AgentRandom, AgentKoki)
 g.showLog = True # ログを表示する
 g.showResult = True # 一戦ごとに結果を表示する
 g.play()
-"""
+
 
 # AgentRandomとAgentMiniMethodが100回プレイする
 """
@@ -21,7 +23,7 @@ draw = 0
 for i in range(REPEAT):
     print("\r", f"Running... {i}/{REPEAT}", end="") # 今何回目かを表示
 
-    g = Game(AgentRandom, AgentMiniMethod)
+    g = Game(AgentKoki, AgentRandom)
     g.showLog = False # ログを表示しない
     g.showResult = False # 一戦ごとに結果をしない
     winner = g.play()
