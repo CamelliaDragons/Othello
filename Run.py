@@ -1,15 +1,15 @@
-from Game import Game
+from othello_lib.Game import Game
 from AgentRandom import AgentRandom
 from AgentMiniMethod import AgentMiniMethod
 
 
 # agentRandomとAgentMiniMethodが一回プレイする
-"""
+# """
 g = Game(AgentRandom, AgentMiniMethod)
 g.showLog = True # ログを表示する
 g.showResult = True # 一戦ごとに結果を表示する
 g.play()
-"""
+# """
 
 # AgentRandomとAgentMiniMethodが100回プレイする
 """
@@ -37,7 +37,7 @@ print(f"player1Win:{p1_win}, player2Win:{p2_win}, Draw:{draw}")
 
 # デバッグ用に一手ごとにプレイする
 """
-from Board import Board,WHITE,BLACK
+from othello_lib.Board import Board,WHITE,BLACK
 b = Board() # 新しいボードを作成
 b.show() # 現在のボードを表示
 print(b.get_valid_moves(WHITE)) # WHITEが利用可能な行動を表示

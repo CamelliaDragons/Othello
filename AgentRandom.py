@@ -1,7 +1,7 @@
 from random import choice
 from typing import List
-from Board import Board, WHITE,BLACK
-from AgentBase import Agent
+from othello_lib.Board import Board, WHITE,BLACK
+from othello_lib.AgentBase import Agent
 
 class AgentRandom(Agent):
     # 可能な行動の中からランダムで行動を選択するエージェント
